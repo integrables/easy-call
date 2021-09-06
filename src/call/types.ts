@@ -16,6 +16,6 @@ export type CallType = <TRequest, TResponse, TQuery = undefined>(
     onFinish?: () => void,
 ) => void;
 
-export type GetApiType<TResponse, TQuery = undefined> = (query?: TQuery) => ApiType<null, TResponse, TQuery>;
+export type GetApiType<TRequest, TResponse, TQuery = undefined> = (data: TRequest, query?: TQuery) => ApiType<null, TResponse, TQuery>;
 
 export type PostApiType<TRequest, TResponse, TQuery = undefined> = (data: TRequest, query?: TQuery) => ApiType<TRequest, TResponse, TQuery>;
