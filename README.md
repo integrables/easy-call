@@ -10,6 +10,15 @@ npm install @integrables/easy-call --save
 
 ## Usage
 
+#### Configure Axios
+
+```Typescript
+
+var {axios} = require("@integrables/easy-call")
+
+axios.defaults.baseURL = "https://api.publicapis.org";
+
+```
 
 #### POST Request
 
