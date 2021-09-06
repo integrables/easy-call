@@ -5,7 +5,7 @@ Declare and call your api in quicly and easily with the power of typescript, and
 ## Installation
 
 ```
-npm install easy-call --save
+npm install @integrables/easy-call --save
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ npm install easy-call --save
 #### POST Request
 
 ```Typescript
-import { call, PostApiType, apiMethod } from "easy-call";
+import { call, PostApiType, apiMethod } from "@integrables/easy-call";
 
 export type User = {
   userId: string,
@@ -42,7 +42,7 @@ call(createUser({userId: 'er46ft', username: "Sam"}), (response) => {
 Api consumer don't have to deal with strings in order to send get parameters from the top level, the consumer of your api only pass a typed object!
 
 ```Typescript
-import { call, GetApiType, apiMethod } from "easy-call";
+import { call, GetApiType, apiMethod } from "@integrables/easy-call";
 
 //Declare your API
 const getUser: GetApiType<{ userId: string }, User> = (request, query) => ({
@@ -63,7 +63,7 @@ call(getUser({userId: 'er46ft'}), (response) => {
 Query Parameters are handled internally, passing a typed object should do the job!
 
 ```Typescript
-import { call, GetApiType, apiMethod } from "easy-call";
+import { call, GetApiType, apiMethod } from "@integrables/easy-call";
 
 //Declare your API
 const getUsers: GetApiType<{}, { users: Array<User> }, { page: number, size: number, age: number }> = (request, query) => ({
