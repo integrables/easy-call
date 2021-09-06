@@ -1,0 +1,1 @@
+export type GenerateQueryString = <TObjectType>(query: TObjectType) => string
